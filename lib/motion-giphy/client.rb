@@ -1,5 +1,3 @@
-require "bubble-wrap/http"
-
 module MotionGiphy
   class Client
     def self.search(query, options = {}, &block)
