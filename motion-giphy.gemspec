@@ -6,18 +6,19 @@ Gem::Specification.new do |spec|
   spec.version       = VERSION
   spec.authors       = ["Will Raxworthy"]
   spec.email         = ["git@willrax.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Giphy API wrapper for RubyMotion}
+  spec.summary       = %q{Giphy API wrapper for RubyMotion}
   spec.homepage      = ""
   spec.license       = ""
 
   files = []
-  files << 'README.md'
-  files.concat(Dir.glob('lib/**/*.rb'))
+  files << "README.md"
+  files.concat(Dir.glob("lib/**/*.rb"))
   spec.files         = files
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "bubble-wrap"
   spec.add_development_dependency "rake"
 end
