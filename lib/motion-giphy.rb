@@ -1,3 +1,6 @@
+require "bubble-wrap/core"
+require "bubble-wrap/http"
+
 unless defined?(Motion::Project::Config)
   raise "This file must be required within a RubyMotion project Rakefile."
 end
