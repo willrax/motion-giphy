@@ -14,7 +14,7 @@ module MotionGiphy
       response
     end
 
-    attr_accessor :error, :data, :json, :success
+    attr_accessor :data, :json, :success
 
     def process_data_as_singular
       self.data = gif.new(self.json["data"])
@@ -22,6 +22,10 @@ module MotionGiphy
 
     def process_data_as_batch
       self.data = gif.process_batch(self.json["data"])
+    end
+
+    def pagination
+      @pages ||= MotionGiphy::Pagination.new(response.json["pagination"])
     end
 
     def error

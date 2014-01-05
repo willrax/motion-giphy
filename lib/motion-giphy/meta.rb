@@ -4,7 +4,7 @@ module MotionGiphy
 
     def initialize(meta)
       @message = meta["message"]
-      @message = meta["status"]
+      @status = meta["status"]
     end
   end
 end
