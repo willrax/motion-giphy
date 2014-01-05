@@ -25,7 +25,7 @@ module MotionGiphy
     end
 
     def pagination
-      @pages ||= MotionGiphy::Pagination.new(response.json["pagination"])
+      @pages ||= MotionGiphy::Pagination.new(json["pagination"])
     end
 
     def error
@@ -33,7 +33,7 @@ module MotionGiphy
     end
 
     def meta
-      @meta ||= MoptionGiphy::Meta.new(response.json["meta"])
+      @meta ||= MoptionGiphy::Meta.new(json["meta"])
     end
 
     def success?
