@@ -30,6 +30,10 @@ module MotionGiphy
       image.new(images["fixed_height"])
     end
 
+    def fixed_width_still
+      image.new(images["fixed_width_still"])
+    end
+
     def fixed_height_still
       image.new(images["fixed_height_still"])
     end
