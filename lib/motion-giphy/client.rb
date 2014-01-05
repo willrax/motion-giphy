@@ -17,7 +17,7 @@ module MotionGiphy
     end
 
     def self.trending(options = {}, &block)
-      request.get("trending") do |response|
+      request.get("trending", options) do |response|
         response.process_data_as_batch if response.success?
         block.call response
       end

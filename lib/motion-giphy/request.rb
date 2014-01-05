@@ -1,6 +1,5 @@
 module MotionGiphy
   class Request
-
     def get(path, options={}, &block)
       BW::HTTP.get(create_path(path), payload: create_options(options)) do |result|
         block.call response.build_with_result(result)
