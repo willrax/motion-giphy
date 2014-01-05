@@ -22,6 +22,14 @@ module MotionGiphy
       image.new(images["original"])
     end
 
+    def fixed_width
+      image.new(images["fixed_width"])
+    end
+
+    def fixed_height
+      image.new(images["fixed_height"])
+    end
+
     def fixed_height_still
       image.new(images["fixed_height_still"])
     end
