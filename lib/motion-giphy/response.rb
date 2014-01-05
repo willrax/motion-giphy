@@ -8,13 +8,13 @@ module MotionGiphy
         response.json = BW::JSON.parse(result.body.to_s)
       else
         response.success = false
-        response.error = result.error
+        response.error = MotionGiphy::Error.new(result.error)
       end
 
       response
     end
 
-    attr_accessor :data, :json, :success
+    attr_accessor :data, :json, :success, :error
 
     def process_data_as_singular
       self.data = gif.new(self.json["data"])
@@ -26,10 +26,6 @@ module MotionGiphy
 
     def pagination
       @pages ||= MotionGiphy::Pagination.new(json["pagination"])
-    end
-
-    def error
-      @error ||= MotionGiphy::Error.new(error)
     end
 
     def meta
