@@ -1,19 +1,23 @@
 module MotionGiphy
   class Request
-    def get(path, options={}, &block)
-      BW::HTTP.get(create_path(path), payload: create_options(options)) do |result|
+    def get(path, options = {}, &block)
+      client.get(path, create_options(options)) do |result|
         block.call response.build_with_result(result)
       end
     end
 
     private
 
-    def response
-      MotionGiphy::Response
+    def client
+     AFMotion::SessionClient.build("http://api.giphy.com/v1/gifs/") do
+        session_configuration :default
+        header "Accept", "application/json"
+        response_serializer :json
+      end
     end
 
-    def create_path(path)
-      "http://api.giphy.com/v1/gifs/#{path}"
+    def response
+      MotionGiphy::Response
     end
 
     def create_options(options)

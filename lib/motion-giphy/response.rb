@@ -3,9 +3,9 @@ module MotionGiphy
     def self.build_with_result(result)
       response = self.new
 
-      if result.ok?
+      if result.success?
         response.success = true
-        response.json = BW::JSON.parse(result.body.to_s)
+        response.json = result.object
       else
         response.success = false
         response.error = MotionGiphy::Error.new(result.error)
