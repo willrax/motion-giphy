@@ -26,8 +26,16 @@ module MotionGiphy
       image.new(images["fixed_width"])
     end
 
+    def fixed_width_downsampled
+      image.new(images["fixed_width_downsampled"])
+    end
+
     def fixed_height
       image.new(images["fixed_height"])
+    end
+
+    def fixed_height_downsampled
+      image.new(images["fixed_height_downsampled"])
     end
 
     def fixed_width_still
