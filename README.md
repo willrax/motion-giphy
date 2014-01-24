@@ -1,29 +1,27 @@
-# motion-giphy
+# Motion Giphy
+> A wrapper around http://giphy.com
 
-TODO: Write a gem description
+![](http://media1.giphy.com/media/r2BtghAUTmpP2/200.gif)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this to your Gemfile:
+```ruby
+gem "motion-giphy"
+```
 
-    gem 'motion-giphy'
+Then execute:
 
-And then execute:
+```
+$ bundle
+```
 
-    $ bundle
+MotionGiphy relies on [AFMotion](https://github.com/usepropeller/afmotion) to run so you'll need to install the neccessary pods.
 
-Or install it yourself as:
+```
+# First get Cocoapods up and running.
+$ pod setup
 
-    $ gem install motion-giphy
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+# Now install the needed pods.
+$ rake pod:install
+```
