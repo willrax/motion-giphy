@@ -9,7 +9,7 @@ module MotionGiphy
     private
 
     def client
-     AFMotion::SessionClient.build("http://api.giphy.com/v1/gifs/") do
+     AFMotion::SessionClient.build_shared("http://api.giphy.com/v1/gifs/") do
         session_configuration :default
         header "Accept", "application/json"
         response_serializer :json
