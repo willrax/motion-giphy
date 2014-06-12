@@ -18,6 +18,10 @@ module MotionGiphy
       hash["url"]
     end
 
+    def embed_url
+      hash["embed_url"]
+    end
+
     def original
       image.new(images["original"])
     end
