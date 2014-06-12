@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-VERSION = "1.2.2"
+VERSION = "1.2.3"
 
 Gem::Specification.new do |spec|
   spec.name          = "motion-giphy"

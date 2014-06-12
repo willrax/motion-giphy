@@ -18,6 +18,10 @@ module MotionGiphy
       hash["url"]
     end
 
+    def bitly_url
+      hash["bitly_gif_url"]
+    end
+
     def embed_url
       hash["embed_url"]
     end
